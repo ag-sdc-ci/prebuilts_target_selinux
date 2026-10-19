@@ -1,0 +1,26 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libselinux.a-x86_64-v2.so",
+		    "libdummy_binary_libselinux.a.so",
+		    "libdummy_binary_libsepol.a-x86_64-v2.so",
+		    "libdummy_binary_libsepol.a.so",
+		    "libdummy_ext_selinux-x86_64-v2.so",
+		    "libdummy_ext_selinux.so",
+		    "libdummy_headers_ext_selinux-x86_64-v2.so",
+		    "libdummy_headers_ext_selinux.so",
+		    "libselinux-x86_64-v2.so",
+		    "libselinux.so",
+		    "libsepol-x86_64-v2.so",
+		    "libsepol.so"
+	],
+	"requireLibs": [	
+		    "libc++_shared.so",
+		    "libc.so",
+		    "libdl.so",
+		    "liblog.so",
+		    "libm.so",
+		    "libpackagelistparser.so",
+		    "libpcre2.so"
+	],
+	"visible": true
+}

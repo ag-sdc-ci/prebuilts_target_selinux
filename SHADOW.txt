@@ -1,0 +1,6 @@
+shadow prebuilt repo: selinux (target)
+  upstream: platform/external/selinux
+  api-level: 34 (branch 34-20261019)
+  blobs: org.blisslabs.ag.ext.selinux-14000002.apex
+  dev-src: extracted dev payload + regenerated root Android.bp
+  date: 2026-10-19

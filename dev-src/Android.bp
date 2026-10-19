@@ -1,0 +1,109 @@
+// Auto-generated prebuilt Blueprint for external/selinux
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.selinux
+
+package {
+    default_applicable_licenses: ["external_selinux_license"],
+}
+
+license {
+    name: "external_selinux_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL-2.0",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_library_headers {
+    name: "libselinux_headers",
+    export_include_dirs: ["include"],
+    host_supported: true,
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libselinux",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    shared_libs: [
+        "libpcre2",
+        "liblog",
+        "libpackagelistparser",
+    ],
+    arch: {
+        x86_64: {
+            srcs: ["lib/libselinux.so"],
+        },
+    },
+    prefer: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libselinux",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    arch: {
+        x86_64: {
+            srcs: ["lib/libselinux.a"],
+        },
+    },
+    prefer: true,
+}
+
+cc_library_headers {
+    name: "libsepol_headers",
+    export_include_dirs: [
+        "include",
+        "cil/include",
+    ],
+    host_supported: true,
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsepol",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    arch: {
+        x86_64: {
+            srcs: ["lib/libsepol.so"],
+        },
+    },
+    prefer: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libsepol",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    arch: {
+        x86_64: {
+            srcs: ["lib/libsepol.a"],
+        },
+    },
+    prefer: true,
+}
